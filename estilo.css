@@ -31,24 +31,43 @@ padding: 16px;
 border-bottom: 2px solid;
 
 }
-
 .hero nav {
     position: absolute;
     top: 20px;
-    right: 50px;
+    right: 20px; /* Alterado para 20px para manter espaço do canto */
 }
 
 .hero nav ul {
-    margin: 20px 50px 0 0 ;
+    margin: 0;
     padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end; /* Para alinhar à direita */
 }
 
 .hero nav li {
-    display: inline-block;
-    list-style-type: none;
-    border: 1px solid white;
     margin-left: 16px;
 }
+
+/* Media query para telas menores */
+@media screen and (max-width: 768px) {
+    .hero nav {
+        top: 10px; /* Ajuste a posição na parte superior para telas menores */
+        right: 10px; /* Ajuste a posição na direita para telas menores */
+    }
+
+    .hero nav ul {
+        flex-direction: column; /* Altera para uma disposição de coluna */
+        align-items: flex-end; /* Alinha os itens à direita */
+    }
+
+    .hero nav li {
+        margin-left: 0; /* Remove a margem à esquerda */
+        margin-bottom: 10px; /* Adiciona um espaço entre os itens */
+    }
+}
+
+
 
 .hero nav a {
     background-color: rgba(0, 0, 0, 0.3);
